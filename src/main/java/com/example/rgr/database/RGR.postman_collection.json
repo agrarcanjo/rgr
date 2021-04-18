@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "daa498b2-8ffa-40cd-9ffa-d58044305081",
+		"name": "RGR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Questão 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJSON;",
+							"",
+							"try { responseJSON = JSON.parse(responseBody); }",
+							"catch (e) { }",
+							"",
+							"",
+							"tests[\"response has data\"] = responseJSON && responseJSON.data && (responseJSON.data.length === 256);",
+							"tests[\"content-type equals text/plain\"] = responseJSON && responseJSON.headers && (responseJSON.headers[\"content-type\"] === 'text/plain');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"complexNumbers\" :\n    [\n        {\n        \"real\": 1,\n        \"imaginary\": \"12\"\n        },\n        {\n            \"real\": 2,\n            \"imaginary\": \"12\"\n        },\n        {\n            \"real\": 7,\n            \"imaginary\": \"-10\"\n        }     \n\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/questao1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questao1"
+					]
+				},
+				"description": "The HTTP `POST` request method is meant to transfer data to a server \n(and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `POST` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following request,\n\n> POST /hi/there?hand=wave\n>\n> <request-body>\n\nThe parameter \"hand\" has the value \"wave\". The request body can be in multiple\nformats. These formats are defined by the MIME type of the request. The MIME \nType can be set using the ``Content-Type`` HTTP header. The most commonly used \nMIME types are:\n\n* `multipart/form-data`\n* `application/x-www-form-urlencoded`\n* `application/json`\n\nThis endpoint echoes the HTTP headers, request parameters, the contents of\nthe request body and the complete URI requested."
+			},
+			"response": []
+		},
+		{
+			"name": "Questão 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJSON;",
+							"",
+							"try { responseJSON = JSON.parse(responseBody); }",
+							"catch (e) { }",
+							"",
+							"",
+							"tests[\"response has data\"] = responseJSON && responseJSON.data && (responseJSON.data.length === 256);",
+							"tests[\"content-type equals text/plain\"] = responseJSON && responseJSON.headers && (responseJSON.headers[\"content-type\"] === 'text/plain');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"name\": \"Adfego nome usuário\",\n    \"email\": \"arcanjo@adfego.org.br\",\n    \"dadName\": \"nome do pai\",\n    \"momName\": \"Nome da mãe\",\n    \"genre\": \"M\",\n    \"civilStatus\": null,\n    \"profession\": null,\n    \"birthDate\": \"2020-10-10\",\n    \"updateDate\": \"2021-02-10\",\n    \"registerDate\": \"2021-02-10\",\n    \"situation\": 0,\n    \"dependent\": null,\n    \"meansLocomotion\": null,\n    \"meansTransport\": null,\n    \"residence\": null,\n    \"schooling\": null,\n    \"death\": null,\n    \"note\": null,\n    \"identifiers\": [\n        {\n            \"id\": null,\n            \"number\": \"12122213113\",\n            \"complement\": null,\n            \"idendifierType\": 0\n\n        }\n    ],\n    \"deficiencyAssociateds\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/questao2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questao2"
+					]
+				},
+				"description": "The HTTP `POST` request method is meant to transfer data to a server \n(and elicit a response). What data is returned depends on the implementation\nof the server.\n\nA `POST` request can pass parameters to the server using \"Query String \nParameters\", as well as the Request Body. For example, in the following request,\n\n> POST /hi/there?hand=wave\n>\n> <request-body>\n\nThe parameter \"hand\" has the value \"wave\". The request body can be in multiple\nformats. These formats are defined by the MIME type of the request. The MIME \nType can be set using the ``Content-Type`` HTTP header. The most commonly used \nMIME types are:\n\n* `multipart/form-data`\n* `application/x-www-form-urlencoded`\n* `application/json`\n\nThis endpoint echoes the HTTP headers, request parameters, the contents of\nthe request body and the complete URI requested."
+			},
+			"response": []
+		},
+		{
+			"name": "consultar Filmes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/custom/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"associated",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
