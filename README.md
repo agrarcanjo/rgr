@@ -49,7 +49,8 @@ Navegue para o diretório target e execute:
 > java -jar rgr-0.0.1-SNAPSHOT.jar
 ```
 
-Execute, para inserir valores iniciais conforme: [initial_script.sql](src/main/java/com/example/rgr/database/initial_state.sql)
+Execute, para inserir valores iniciais e conferir as consultas realizadas, 
+segue conforme: [initial_script.sql](src/main/java/com/example/rgr/database/initial_state.sql)
 
 O serviço assim estará disponível na máquina local:
 
